@@ -4,31 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    .decorated-box {
-      position: relative;
-      width: 200px;
-      height: 200px;
-      background-color: #f0f0f0;
-      border-radius: 15px;
-      overflow: hidden;
-    }
+  .decorated-div {
+    width: 300px;
+    height: 150px;
+    background-color: #3498db;
+    border-radius: 20px; /* Utilisez une valeur appropriée pour les coins arrondis */
+    overflow: hidden; /* Cache le contenu dépassant des coins arrondis */
+  
+    position: relative; /* Permet de positionner les éléments enfants par rapport à ce div */
+  }
+  
+  /* Ligne courbe en haut */
+  .decorated-div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to right, transparent, #3498db, transparent);
+    border-radius: 50% 50% 0 0; /* Crée une courbe en haut */
+  }
+  
+  /* Ligne courbe en bas */
+  .decorated-div::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to right, transparent, #3498db, transparent);
+    border-radius: 0 0 50% 50%; /* Crée une courbe en bas */
+  }
 
-    .decorated-box::before,
-    .decorated-box::after {
-      content: '';
-      position: absolute;
-      width: 50%;
-      height: 100%;
-      background: linear-gradient(to right, #f0f0f0 0%, transparent 100%);
-      border-radius: 50% 0 0 50%;
-    }
-
-    .decorated-box::after {
-      right: 0;
-      left: initial;
-      background: linear-gradient(to left, #f0f0f0 0%, transparent 100%);
-      border-radius: 0 50% 50% 0;
-    }
   </style>
 </head>
 <body>
