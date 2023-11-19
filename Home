@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baker Network | Home</title>
+    <link rel="icon" type="image/x-icon" href="Logo jeune.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://learn.microsoft.com/en-us/typography/font-list/segoe-ui">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Roboto?query=roboto">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            text-decoration: none;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Pour masquer la barre de défilement horizontale */
+            transition: background-color 0.5s;
+            background: linear-gradient(to left, rgb(94, 92, 92) 0%,rgb(173, 169, 169) 100%);
+
+        }
+        .menu {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 100px;
+            position: fixed;
+        }
+        .logo{
+            width: 130px;
+            height: auto;
+            position: fixe;
+            transition: width 0.5s ease;
+            padding-left: 10px;
+        }
+        .menu h1{
+            font-size: 2.5em;
+            padding: 0 35%;
+            color: rgb(255, 255, 255);
+            position: fixed;
+            font-family: 'Wix Madefor Text', sans-serif; 
+        }
+        .home {
+            text-align: center;
+            width: 98%;
+            margin-top: 20px;
+            height: 1900px;
+            padding-top: 10px;
+            background-color: rgb(255, 255, 255);
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+        .whiteJeune {
+            position: absolute;
+            top: 600px;
+            width: 100%;
+            height: 200px;
+        }
+        .page {
+            position: absolute;
+            top: 800px;
+            width: 100%;
+            height: 1100px;
+            padding-top: 10px;
+            background-color: white;
+        }
+        
+        .Ecran {
+            width: 100%;
+        }
+        .Ordi{
+            opacity: 0; /* L'image est initialement transparente */
+            transition: opacity 1s ease-in-out; /* Ajoute une transition de 1 seconde en fondu */
+            margin: auto;
+            width: 40%;
+        }
+        /*-- Menu --*/
+        .menutop{
+            padding: 0 7px;
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            align-items: center;
+            margin-left: 10px;
+            margin-right: 20px;
+        }
+        .menutop .logo{
+            width: 150px;
+            height: auto;
+            position: fixe;
+            transition: width 0.5s ease;
+        }
+        .menutop h3 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .menutop .navMenu ul{
+            display: flex; 
+            list-style-type: none;
+        }
+        .menutop .navMenu ul li{
+            margin: 0 20px;
+            font-family: sans-serif;
+            font-size: 1.1em;
+            color: black; 
+        }
+        .menutop .menuHam{
+            display: none;
+            position: absolute;
+            width: 30px;
+            right: 50px;
+            top: 35px;
+        }
+        /*-- Menu petit --*/
+        @media screen and (max-width:1170px){
+            .menutop {
+                padding: 0;
+                background-color: white;
+            }
+            .menutop h3{
+                position: absolute;
+                top: 30px;
+                left: 50px;
+                font-size: 2em;
+                font-weight: bold;
+            }  
+            .menutop .menuHam{
+                display: block;
+            }
+
+        }
+        /*Menu en bas*/
+        .menubar{
+            padding: 7px;
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            align-items: center;
+            position: fixed;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            transition: top 0.3s;
+            z-index: 2;
+        }
+        #menubar {
+            top: -100px;
+        }
+        .menubar h3 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .menubar .navMenu ul{
+            display: flex; 
+            list-style-type: none;
+        }
+        .menubar .navMenu ul li{
+            margin: 0 20px;
+            font-family: sans-serif;
+            font-size: 1.1em;
+            color: black; 
+        }
+        .menubar .menuHam{
+            display: none;
+            position: absolute;
+            width: 30px;
+            right: 50px;
+            top: 35px;
+        }
+        .u{
+            position: absolute;
+            width: 21px;
+            left: 17px;
+            top: 26px;
+        }
+        /*-- Menu petit --*/
+        @media screen and (max-width:1170px){
+            .menubar {
+                padding: 0;
+                background-color: white;
+            }
+            .menubar h3{
+                position: absolute;
+                top: 30px;
+                left: 50px;
+                font-size: 2em;
+                font-weight: bold;
+            }
+            .navMenu{
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0.253);
+                backdrop-filter: blur(5px);
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: -100%;    
+            }
+            .mobileMenu{
+                margin-left: 0;
+            }   
+            .menubar .menuHam{
+                display: block;
+            }
+            .navMenu ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .navMenu ul li{
+            margin: 25px 0; 
+            font-size: 1.5em;  
+            }
+        }
+        .curved-line {
+            fill: none;
+            stroke: #d5db34; /* Couleur de la ligne */
+            stroke-width: 4; /* Largeur de la ligne */
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="menubar" id="menubar">
+        <div id="resizableImage"><img class="logo" src="Baker Network QQ.png" alt="Logo"></div>
+        <div class="navMenu">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="" class="WhyCUs">RÉALISATIONS</a></li>
+                <li><a href="" class="Appfo">test</a></li>
+                <li><a href="about.html">About us</a></li>
+            </ul>
+        </div>
+        <img src="Image/Hamburger_icon.png" alt="Menu" class="menuHam" id="menuHam" onclick="menuHam">
+    </nav>
+    <div class="home">
+        <nav class="menutop" id="menubar">
+            <div id="resizableImage"><img class="logo" src="Baker Network QQ.png" alt="Logo"></div>
+            <div class="navMenu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="" class="WhyCUs">RÉALISATIONS</a></li>
+                    <li><a href="" class="Appfo">test</a></li>
+                    <li><a href="about.html">About us</a></li>
+                </ul>
+            </div>
+            <img src="Image/Hamburger_icon.png" alt="Menu" class="menuHam" id="menuHam" onclick="menuHam">
+        </nav>
+        <img id="ordi" class="Ordi" src="Bakerordi.png" alt="Ordinateur">
+    </div>
+    <img class="whiteJeune" src="whitejeuney.png" alt="white">
+    <div class="page">
+
+    </div>
+</body>
+<script>
+
+    setTimeout(function() {
+        document.getElementById("ordi").style.opacity = "1";
+    }, 2000);
+    const menuHamburger = document.querySelector(".menuHam")
+    const navMenu = document.querySelector(".navMenu")
+ 
+    menuHamburger.addEventListener('click',()=>{
+        navMenu.classList.toggle('mobileMenu')
+    })
+
+    var menu = document.getElementById('menubar');
+    var lastScrollTop = 0;
+
+    window.addEventListener('scroll', function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > 400) {
+            // L'utilisateur a fait défiler au-delà de 500px
+            if (scrollTop > lastScrollTop) {
+            // Faites défiler vers le bas
+            menu.style.top = '-100px';
+            } else {
+            // Faites défiler vers le haut
+            menu.style.top = '0';
+            }
+        } else {
+            // L'utilisateur est en haut de 500px, masquez le menu
+            menu.style.top = '-100px';
+        }
+    
+    lastScrollTop = scrollTop;
+    });
+
+
+</script>
+</html>
