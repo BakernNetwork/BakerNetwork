@@ -34,6 +34,7 @@
             padding: 0;
             overflow-x: hidden; /* Pour masquer la barre de défilement horizontale */
             transition: background-color 0.5s;
+            height: 2700px;
 
         }
         .menu {
@@ -68,7 +69,7 @@
             margin-left: 30px;
         }
         .txth{
-            background: linear-gradient(to top, #B4E5AD,#FFD700); 
+            background: linear-gradient(to top, #4CF4DB,#3B2DDD); 
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
@@ -77,7 +78,7 @@
             letter-spacing: -3px;
         }
         .txtb{
-            background: linear-gradient(to top, #9bc796,#B4E5AD); 
+            background: linear-gradient(to top, #4CF4DB,#B4E5AD); 
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
@@ -104,14 +105,14 @@
             padding: 16px 14px 18px;
             color: #000000;
             box-shadow: inset 0 0 0 2px transparent;
-            background-image: linear-gradient(to right,#FFD700,#B4E5AD);
+            background-image: linear-gradient(to right,#3B2DDD,#4CF4DB);
             height: 48px;
             margin-right: 10px;
             margin-top: 20px;
         }
         .btn1:hover{
             color: #000;
-            box-shadow: inset 0 0 0 2px #B4E5AD;
+            box-shadow: inset 0 0 0 2px #4CF4DB;
             background-image: linear-gradient(transparent,transparent);
         }
         .btn2{
@@ -131,7 +132,7 @@
             text-align: center;
             padding: 16px 14px 18px;
             color: #000000;
-            box-shadow: inset 0 0 0 2px #B4E5AD;
+            box-shadow: inset 0 0 0 2px #4CF4DB;
             background-color: transparent;
             height: 48px;
             margin-right: 10px;
@@ -140,19 +141,28 @@
         .btn2:hover{
             color: #fff;
             box-shadow: inset 0 0 0 2px transparent;
-            background-color: #B4E5AD;
+            background-color: #4CF4DB;
         }        
         .page1 {
             text-align: center;
+            display: none;
+            flex-direction: column;
             width: 100%;
             top: 900px;
             height: 800px;
-            display: flex;
+            animation: pagediv1 1.3s ease 0s 1 normal forwards;
+            z-index: 1;
         }
-        .webgauche{
-            width: 50%;
-            height: 800px;
-            left: 0;
+        @keyframes pagediv1 {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         .websolu{
             width: 50%;
@@ -161,6 +171,7 @@
             left: 0;
             display: flex;
             text-align: center;
+            flex-direction: column;
             margin-right: 30px;
         }
         .txtweb{
@@ -173,48 +184,167 @@
             letter-spacing: -3px;
             margin-top: -12px;
         }
+        .creation_image{
+            width: 30%;
+            z-index: 1;
+        }
+        .creation_image img{
+            width: 90%;
+        }
+        .Hosting_image img{
+            width: 95%;
+        }
+        .creation_image img:hover{
+            background-color: #05acff;
+            transition: 4s;
+        }
+        .Hosting_image img:hover{
+            background-color: #05acff;
+            transition: 4s;
+        }
+        .Hosting_image{
+            z-index: 1;
+            margin-top: 5px;
+            width: 30%;
+        }
         .page2 {
-            text-align: center;
+            display: none;
+            flex-direction: column;
             width: 100%;
-            top: 1700px;
-            height: 800px;
+            height: 500px;
+            animation: pagediv1 1.3s ease 0s 1 normal forwards;
+        }
+        .page2gauche{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            animation: pagediv1 1.3s ease 0s 1 normal forwards;
+        }
+        .Projects_image{
+            margin-top: 60px;
+            width: 85%;
+            padding: 2px;
+            background-image: linear-gradient(to right,#3B2DDD,#4CF4DB);
+        }
+        .txtprojets{
+            background: linear-gradient(to top, #05acff,#ade5d2); 
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 4.7em;
+            font-family: sans-serif;
+            letter-spacing: -3px;
         }
         .Hautedroit {
             position: absolute;
             top: 0;
             right: 0;
             width: 65%;
-            z-index: -1;
+            z-index: -2;
         }
         .HauteGauche {
             position: absolute;
-            top: 8.5in;
+            top: 8.0in;
             left: 0;
             width: 40%;
             z-index: -1;
         }
-        .HauteGaucheordi{
-            position: absolute;
-            top: 9.8in;
-            left: 100px;
-            width: 30%;
-        }
         .basdroite{
             position: absolute;
-            top: 1790px;
+            top: -110px;
             right: 0;
-            width: 60%;
+            width: 50%;
             z-index: -2;
         }
         .Ordi{
             opacity: 0; /* L'image est initialement transparente */
-            transition: opacity 1s ease-in-out; /* Ajoute une transition de 1 seconde en fondu */
+           /* transition: opacity 1s ease-in-out; /* Ajoute une transition de 1 seconde en fondu */
+            animation: myAnim 3s ease 0.6s 1 normal forwards;
             margin: auto;
-            width: 40%;
+            width: 51%;
             position: absolute;
-            top: 120px;
-            right: 200px;
+            top: -30px;
+            right: 80px;
+            z-index: -1;
         }
+        @keyframes myAnim {
+            0% {
+                transform: translateX(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .rouebdiv{
+            animation: roue 25s ease-in 2s infinite normal forwards;
+            position: absolute;
+            top: 700px;
+            left: 70px;
+            width: 10%;
+            z-index: -1;
+        }
+        .rouebfdiv{
+            animation: roue 25s ease-in 2s infinite normal forwards;
+            position: absolute;
+            top: 570px;
+            left: 270px;
+            width: 10%;
+            z-index: -1;
+        }
+        .rouebcdiv{
+            animation: roue 25s ease-in 2s infinite normal forwards;
+            position: absolute;
+            top: 10px;
+            right: 70px;
+            width: 10%;
+            z-index: -1;
+        }
+        .roueb{
+            width: 100%;
+            animation: rotation 55s infinite ease;
+        }
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes roue {
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-10px, 10px);
+            }
+
+            40% {
+                transform: translate(-20px, -10px);
+            }
+
+            60% {
+                transform: translate(10px, 20px);
+            }
+
+            80% {
+                transform: translate(10px, -10px);
+            }
+
+            100% {
+                transform: translate(0);
+            }
+        }
+        .solution_cre{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         /*-- Menu --*/
         .menutop{
             padding: 0 7px;
@@ -223,6 +353,7 @@
             box-sizing: border-box;
             margin-left: 10px;
             margin-right: 20px;
+            z-index: 2;
         }
         .menutop .logo{
             width: 290px;
@@ -398,37 +529,41 @@
                 <button class="btn1">Work with us</button>
                 <button class="btn2">Our services</button>
             </div>
-
+            <div class="rouebdiv"><img class="roueb" src="Image/roueb.png" alt="Roue"></div>
         </div>
-        <img id="ordi" class="Ordi" src="Image/bakerordi.png" alt="Ordinateur">
-        <img class="Hautedroit" src="Image/HautdroiteJB.png" alt="rien">
+        <img id="ordi" class="Ordi" src="Image/digitics_site_vitrine.png" alt="Ordinateur">
+        <img class="Hautedroit" src="Image/bleuArHTDT.png" alt="rien">
     </div>
     <div class="page1">
-        <div class="webgauche">
-
+        <h2 class="txtweb">WEB SOLUTIONS</h2>
+        <h3>Accelerate your web presence with our team of experts who offer turnkey web services!</h3>
+        <div class="solution_cre">
+            <div class="creation_image">
+                <img id="creation" class="" src="Image/WEbsiteDeg.png" alt="Ordinateur">
+                <h2 class="">WEBSITE DESIGN</h2>
+            </div>
+            <div class="Hosting_image">
+                <img id="creation" class="" src="Image/Hosting.png" alt="Ordinateur">
+                <h2 class="">HOSTING</h2>
+            </div>
         </div>
-        <div class="websolu">
-            <h2 class="txtweb">DEVELOPMENT</h2>
-        </div>
-        <img class="HauteGaucheordi" src="Image/ordiGauche.png" alt="ordi">
-        <img class="HauteGauche" src="Image/HautgaucheJB.png" alt="rien">
+        <div class="rouebcdiv"><img class="roueb" src="Image/rouebc.png" alt="Roue"></div>
+        <div class="rouebfdiv"><img class="roueb" src="Image/rouebf.png" alt="Roue"></div>
     </div>
     <div class="page2">
-        <img class="basdroite" src="Image/BasdroiteVB.png" alt="rien">
+        <div class="page2gauche">
+            <h2 class="txtprojets">PROJECTS</h2>
+            <img class="Projects_image" src="Image/projetbakerdesign.png" alt="baker">
+        </div>
+        <img class="basdroite" src="Image/bleuArBsDT.png" alt="rien">
+        <img class="basdroite" src="Image/digitics_services_convaincu.png" alt="services">
     </div>
-            
+    <!--  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#237ff6" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>        
+-->
 </body>
 <script>
 
-    setTimeout(function() {
-        document.getElementById("ordi").style.opacity = "1";
-    }, 2000);
-    const menuHamburger = document.querySelector(".menuHam")
-    const navMenu = document.querySelector(".navMenu")
- 
-    menuHamburger.addEventListener('click',()=>{
-        navMenu.classList.toggle('mobileMenu')
-    })
+    
 
     var menu = document.getElementById('menubar');
     var lastScrollTop = 0;
@@ -455,20 +590,45 @@
 
 
     document.addEventListener("DOMContentLoaded", function() {
-    window.onscroll = function() {
-        showAnimatedDiv();
-    };
-});
+        window.onscroll = function() {
+            showAnimatedDiv();
+        };
+    });
 
-function showAnimatedDiv() {
-    var scrollPosition = window.scrollY;
+    function showAnimatedDiv() {
+        var scrollPosition = window.scrollY;
 
-    if (scrollPosition >= 500) {
-        document.getElementById("animatedDiv").style.display = "block";
-    } else {
-        document.getElementById("animatedDiv").style.display = "none";
+        if (scrollPosition >= 500) {
+            document.getElementById("animatedDiv").style.display = "block";
+        } else {
+            document.getElementById("animatedDiv").style.display = "none";
+        }
     }
-}
+    document.addEventListener("DOMContentLoaded", function() {
+        var alreadyShown = false;
+
+        window.addEventListener("scroll", function() {
+            var scrollPosition = window.scrollY;
+
+            if (scrollPosition >= 300 && !alreadyShown) {
+                document.querySelector(".page1").style.display = "flex";
+                alreadyShown = true; // Définir la variable sur true pour ne pas répéter l'action
+            }
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        var alreadyShown = false;
+
+        window.addEventListener("scroll", function() {
+            var scrollPosition = window.scrollY;
+
+            if (scrollPosition >= 1100 && !alreadyShown) {
+                document.querySelector(".page2").style.display = "flex";
+                alreadyShown = true; // Définir la variable sur true pour ne pas répéter l'action
+            }
+        });
+    });
+</script>
 
 
 </script>

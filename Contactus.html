@@ -406,19 +406,28 @@
         <img class="Hautedroit" src="Image/HautdroiteJB.png" alt="rien">
     </div>
     <div class="page1">
-        <div class="webgauche">
 
-        </div>
-        <div class="websolu">
-            <h2 class="txtweb">DEVELOPMENT</h2>
-        </div>
+        <h1>Contact Us</h1>
+
+        
         <img class="HauteGaucheordi" src="Image/ordiGauche.png" alt="ordi">
         <img class="HauteGauche" src="Image/HautgaucheJB.png" alt="rien">
     </div>
     <div class="page2">
         <img class="basdroite" src="Image/BasdroiteVB.png" alt="rien">
     </div>
-            
+    <form action="process-form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+    
+        <input type="submit" value="Submit">
+    </form>
 </body>
 <script>
 
