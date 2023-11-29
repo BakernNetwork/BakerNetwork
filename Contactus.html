@@ -416,13 +416,17 @@
     <div class="page2">
         <img class="basdroite" src="Image/BasdroiteVB.png" alt="rien">
     </div>
-    <form action="process-form.php" method="post">
-        <label>Votre email</label>
-        <input type="email" name="email" required>
-        <label>Message</label>
-        <textarea name="message" required></textarea>
-        <input type="submit">
-    </form>
+    <form name="contact" netlify>
+        <p>
+          <label>Name <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Email <input type="email" name="email" /></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
 </body>
 <script>
 
